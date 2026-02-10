@@ -1,7 +1,23 @@
-import express from 'express';
-import path from 'path';
-import { fileURLToPath } from 'url';
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+import express from "express";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const app = express();
-app.use(express.static(path.join(__dirname, '../client')));
-app.listen(5000, '0.0.0.0', () => console.log('Server running on port 5000'));
+const port = 5000;
+
+app.use(express.static(path.join(__dirname, "../client")));
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/index.html"));
+});
+
+// Use a long-running process approach
+app.listen(port, "0.0.0.0", () => {
+  console.log(`Server running at http://0.0.0.0:${port}`);
+});
+
+// Keep process alive
+process.stdin.resume();

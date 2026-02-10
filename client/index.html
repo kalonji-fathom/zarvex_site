@@ -15,14 +15,14 @@
             --text-light: #666666;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, sans-serif; }
-        body { line-height: 1.6; color: var(--text-dark); background-color: var(--white); }
+        body { line-height: 1.6; color: var(--text-dark); background-color: var(--white); padding-top: 60px; }
         nav { background: var(--primary); color: var(--white); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         .logo { font-size: 1.5rem; font-weight: bold; }
         .logo span { color: var(--accent); }
         .nav-links { display: flex; list-style: none; }
         .nav-links li a { color: var(--white); text-decoration: none; margin-left: 2rem; font-weight: 500; }
         .nav-links li a:hover { color: var(--accent); }
-        #home { height: 100vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1579445710183-f9a816f5da05?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: var(--white); padding-top: 60px; }
+        #home { height: calc(100vh - 60px); background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1579445710183-f9a816f5da05?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: var(--white); }
         #home h1 { font-size: 3.5rem; margin-bottom: 1rem; }
         #home p { font-size: 1.5rem; max-width: 800px; margin-bottom: 2rem; }
         .btn { background: var(--accent); color: var(--white); padding: 0.8rem 2rem; text-decoration: none; font-weight: bold; border-radius: 4px; display: inline-block; transition: 0.3s; border: none; cursor: pointer; }
@@ -72,7 +72,7 @@
     <section id='contact'>
         <div class='contact-info'><h2>Contact Details</h2><div class='underline' style='margin-left:0; margin-bottom:1.5rem;'></div><p><strong>Warehouse Address:</strong><br>6 Knights Road, Germiston, Gauteng, 1400</p><br><p><strong>Target Regions:</strong><br>Gauteng, North West, Limpopo, Mpumalanga, Free State</p></div>
         <div class='contact-form'>
-            <form action='#'>
+            <form onsubmit='event.preventDefault(); alert("Inquiry sent successfully!"); return false;'>
                 <div class='form-group'><input type='text' placeholder='Your Name' required></div>
                 <div class='form-group'><input type='email' placeholder='Email Address' required></div>
                 <div class='form-group'><textarea placeholder='Your Inquiry' required></textarea></div>
