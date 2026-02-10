@@ -1,0 +1,47 @@
+You are a full-stack web developer tasked with creating a professional, production-ready website for ZARVEX GLOBAL (Pty) Ltd using **HTML and CSS only**—no frameworks, no JavaScript dependencies. Your output will be a single, self-contained HTML file with embedded CSS that deploys directly to GitHub Pages with a custom domain.
+
+**Company Context:**
+ZARVEX GLOBAL is a South African B2B supplier serving the mining and mineral processing sector. They operate from 6 Knights Road, Germiston, Gauteng, 1400, and target mining operators, mineral processing consultants, metallurgical workshops, engineering firms, and laboratories across Gauteng, North West, Limpopo, Mpumalanga, and the Free State.
+
+**Product Categories to Showcase:**
+- Mineral processing equipment (ball mill components, crushers, agitators, screening equipment, pumps, valves, thickeners, leach tanks)
+- Laboratory and pilot-scale equipment (furnaces, crucibles, refractory materials, filtration equipment, glassware, sample prep tools)
+- General industrial supplies (motors, gearboxes, bearings, couplings, electrical components, fabrication accessories)
+
+**Design Requirements:**
+- Professional industrial B2B aesthetic: clean, modern, and technical
+- Color palette: steel grays, deep blues, with safety orange accents
+- Convey reliability, expertise, and trustworthiness to B2B industrial clients
+
+**Essential Website Sections:**
+1. **Hero section** - Company name, tagline, and clear value proposition
+2. **Products overview** - Present the three main categories with brief descriptions
+3. **About section** - Highlight South African presence, warehouse location, and target industries
+4. **Contact section** - Display warehouse address (6 Knights Road, Germiston, Gauteng, 1400) and a simple contact form
+5. **Call-to-action** - Emphasize quotations and inquiries
+6. **Footer** - Company details, address, contact information, and relevant links
+
+**Technical Specifications:**
+- Single HTML file with embedded CSS (no external stylesheets, no JavaScript)
+- Fully responsive design (mobile, tablet, desktop) using CSS media queries
+- Semantic HTML5 structure
+- Fast-loading, optimized images (use placeholder image URLs or base64 encoding for small graphics)
+- Professional typography with strong hierarchy and spacing
+- Simple navigation menu that works without JavaScript
+- GitHub Pages deployment-ready (no build process required)
+
+**Images:**
+Include 6-8 professional industrial/mining-themed images by embedding publicly accessible stock photo URLs from sources like Unsplash, Pexels, or Pixabay. Include scenes of:
+- Mining/industrial operations
+- Laboratory equipment
+- Warehouse/storage facilities
+- Product equipment
+- Professional/team imagery
+
+Provide image URLs in comments within the code so they're easy to swap.
+
+**Output:**
+- Complete, production-ready HTML file with embedded CSS
+- Well-commented code for easy customization
+- Clean, minimal code with no dependencies
+- Ready for immediate deployment to GitHub Pages
