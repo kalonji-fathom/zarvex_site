@@ -1,15 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fira+Code:wght@300..700&family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Oxanium:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>ZARVEX GLOBAL | Mining & Mineral Processing Solutions</title>
+    <style>
+        :root {
+            --primary: #2F4F4F;
+            --secondary: #003366;
+            --accent: #FF5722;
+            --white: #ffffff;
+            --gray-light: #f4f4f4;
+            --text-dark: #333333;
+            --text-light: #666666;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, sans-serif; }
+        body { line-height: 1.6; color: var(--text-dark); background-color: var(--white); }
+        nav { background: var(--primary); color: var(--white); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .logo { font-size: 1.5rem; font-weight: bold; }
+        .logo span { color: var(--accent); }
+        .nav-links { display: flex; list-style: none; }
+        .nav-links li a { color: var(--white); text-decoration: none; margin-left: 2rem; font-weight: 500; }
+        .nav-links li a:hover { color: var(--accent); }
+        #home { height: 100vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1579445710183-f9a816f5da05?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: var(--white); padding-top: 60px; }
+        #home h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+        #home p { font-size: 1.5rem; max-width: 800px; margin-bottom: 2rem; }
+        .btn { background: var(--accent); color: var(--white); padding: 0.8rem 2rem; text-decoration: none; font-weight: bold; border-radius: 4px; display: inline-block; transition: 0.3s; border: none; cursor: pointer; }
+        .btn:hover { background: #e64a19; transform: translateY(-2px); }
+        section { padding: 5rem 5%; }
+        .section-title { text-align: center; margin-bottom: 3rem; }
+        .section-title h2 { font-size: 2.5rem; color: var(--secondary); margin-bottom: 0.5rem; }
+        .underline { width: 60px; height: 4px; background: var(--accent); margin: 0 auto; }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .product-card { background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: 0.3s; }
+        .product-card:hover { transform: translateY(-5px); }
+        .product-img { height: 200px; width: 100%; object-fit: cover; }
+        .product-info { padding: 1.5rem; }
+        .product-info h3 { margin-bottom: 1rem; color: var(--primary); }
+        #about { background: var(--gray-light); }
+        .about-container { display: flex; flex-wrap: wrap; gap: 3rem; align-items: center; }
+        .about-text { flex: 1; min-width: 300px; }
+        .about-img { flex: 1; min-width: 300px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        #contact { display: flex; flex-wrap: wrap; gap: 3rem; }
+        .contact-info, .contact-form { flex: 1; min-width: 300px; }
+        .form-group { margin-bottom: 1rem; }
+        .form-group input, .form-group textarea { width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; }
+        .form-group textarea { height: 120px; resize: vertical; }
+        footer { background: var(--primary); color: var(--white); padding: 3rem 5%; text-align: center; }
+        .footer-logo { font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem; }
+        .copy { font-size: 0.9rem; color: #ccc; }
+        @media (max-width: 768px) { #home h1 { font-size: 2.5rem; } .nav-links { display: none; } }
+    </style>
+</head>
+<body>
+    <nav><div class='logo'>ZARVEX<span>GLOBAL</span></div><ul class='nav-links'><li><a href='#home'>Home</a></li><li><a href='#products'>Products</a></li><li><a href='#about'>About</a></li><li><a href='#contact'>Contact</a></li></ul></nav>
+    <header id='home'><h1>ZARVEX GLOBAL (Pty) Ltd</h1><p>B2B Supplier of Mining and Mineral Processing Equipment.</p><a href='#contact' class='btn'>Inquire Now</a></header>
+    <section id='products'>
+        <div class='section-title'><h2>Products</h2><div class='underline'></div></div>
+        <div class='products-grid'>
+            <div class='product-card'><img src='https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80' class='product-img'><div class='product-info'><h3>Mineral Processing</h3><p>Ball mill components, crushers, agitators, screening equipment, pumps, valves.</p></div></div>
+            <div class='product-card'><img src='https://images.unsplash.com/photo-1581093458791-9f3c3250bb8b?auto=format&fit=crop&w=800&q=80' class='product-img'><div class='product-info'><h3>Laboratory Equipment</h3><p>Furnaces, crucibles, refractory materials, filtration equipment, glassware.</p></div></div>
+            <div class='product-card'><img src='https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80' class='product-img'><div class='product-info'><h3>General Industrial</h3><p>Motors, gearboxes, bearings, couplings, electrical components.</p></div></div>
+        </div>
+    </section>
+    <section id='about'>
+        <div class='about-container'>
+            <div class='about-text'><h2>About ZARVEX GLOBAL</h2><div class='underline' style='margin-left:0; margin-bottom:1.5rem;'></div><p>We are a professional B2B supplier serving the mining and mineral processing sector across South Africa. Our operations are centered in Germiston, Gauteng, targeting mining operators and metallurgical firms.</p></div>
+            <img src='https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=800&q=80' class='about-img'>
+        </div>
+    </section>
+    <section id='contact'>
+        <div class='contact-info'><h2>Contact Details</h2><div class='underline' style='margin-left:0; margin-bottom:1.5rem;'></div><p><strong>Warehouse Address:</strong><br>6 Knights Road, Germiston, Gauteng, 1400</p><br><p><strong>Target Regions:</strong><br>Gauteng, North West, Limpopo, Mpumalanga, Free State</p></div>
+        <div class='contact-form'>
+            <form action='#'>
+                <div class='form-group'><input type='text' placeholder='Your Name' required></div>
+                <div class='form-group'><input type='email' placeholder='Email Address' required></div>
+                <div class='form-group'><textarea placeholder='Your Inquiry' required></textarea></div>
+                <button type='submit' class='btn' style='width:100%'>Submit</button>
+            </form>
+        </div>
+    </section>
+    <footer><div class='footer-logo'>ZARVEX GLOBAL</div><p class='copy'>&copy; 2026 ZARVEX GLOBAL (Pty) Ltd. 6 Knights Road, Germiston, Gauteng, 1400</p></footer>
+</body>
 </html>
